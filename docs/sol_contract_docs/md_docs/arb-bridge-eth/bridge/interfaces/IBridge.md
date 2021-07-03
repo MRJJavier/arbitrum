@@ -1,6 +1,5 @@
 ---
 title: IBridge.sol Spec
-id: IBridge
 ---
 
 ### `deliverMessageToInbox(uint8 kind, address sender, bytes32 messageDataHash) → uint256` (external)

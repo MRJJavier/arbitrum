@@ -1,6 +1,5 @@
 ---
 title: ArbOwner.sol Spec
-id: ArbOwner
 ---
 
 ### `giveOwnership(address newOwnerAddr)` (external)
@@ -19,8 +18,6 @@ id: ArbOwner
 
 ### `setSecondsPerSend(uint256 blocksPerSend)` (external)
 
-### `deployContract(bytes constructorData, address deemedSender, uint256 deemedNonce) → address` (external)
-
 ### `startCodeUpload()` (external)
 
 ### `continueCodeUpload(bytes marshalledCode)` (external)
@@ -32,5 +29,3 @@ id: ArbOwner
 ### `finishCodeUploadAsPluggable(uint256 id, bool keepState)` (external)
 
 ### `bindAddressToPluggable(address addr, uint256 pluggableId)` (external)
-
-### `getTotalOfEthBalances() → uint256` (external)

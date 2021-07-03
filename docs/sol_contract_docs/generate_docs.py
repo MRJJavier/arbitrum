@@ -26,7 +26,7 @@ def get_all_files(dir):
 
 def generate_docs_by_dir(_dir):
     os.system(
-        "yarn solidity-docgen -i packages/{_dir}/contracts -o {path_prefix}/{_dir} -t ./docs/sol_contract_docs".format(
+        "yarn solidity-docgen -i packages/{_dir}/contracts --exclude packages/{_dir}/contracts/**test*,packages/{_dir}/contracts/**/test -o {path_prefix}/{_dir} -t ./docs/sol_contract_docs".format(
             _dir=_dir, path_prefix=path_prefix
         )
     )
@@ -55,15 +55,13 @@ def remove_unwanted_docs():
             if _file.endswith(black_listed_file):
                 os.system("rm " + _file)
             else:
-                # remove "empty" (header-only) files and test files
+                # remove "empty" (header-only) files
                 if not os.path.exists(_file):
                     continue
                 file_data = open(_file, "r")
                 lines = len([line for line in file_data if len(line.strip()) > 0])
-                is_test = _file.find("/test") > -1
                 file_data.close()
-                if lines <= 4 or is_test:
-                    print("removing", _file)
+                if lines <= 3:
                     os.system("rm " + _file)
 
 

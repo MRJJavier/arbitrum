@@ -1,6 +1,5 @@
 ---
 title: ArbBLS.sol Spec
-id: ArbBLS
 ---
 
 ### `register(uint256 x0, uint256 x1, uint256 y0, uint256 y1)` (external)

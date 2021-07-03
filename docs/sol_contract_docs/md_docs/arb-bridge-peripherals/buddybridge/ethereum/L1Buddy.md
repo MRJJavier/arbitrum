@@ -1,6 +1,5 @@
 ---
 title: L1Buddy.sol Spec
-id: L1Buddy
 ---
 
 ### `onlyIfConnected()`

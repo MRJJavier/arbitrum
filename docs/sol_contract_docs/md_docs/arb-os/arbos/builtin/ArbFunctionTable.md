@@ -1,6 +1,5 @@
 ---
 title: ArbFunctionTable.sol Spec
-id: ArbFunctionTable
 ---
 
 ### `upload(bytes buf)` (external)

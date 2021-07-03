@@ -1,6 +1,5 @@
 ---
 title: BuddyDeployer.sol Spec
-id: BuddyDeployer
 ---
 
 ### `executeBuddyDeploy(bytes contractInitCode)` (external)
